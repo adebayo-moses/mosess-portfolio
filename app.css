@@ -11120,105 +11120,105 @@ nav a:focus .nav-arrow,
 nav a:hover .nav-arrow {
   transform: translateX(-3px);
 }
-.odds-ends-grid {
+.misc-grid {
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(14, 1.5rem);
 }
-.odds-ends {
+.misc {
   position: relative;
 }
-.odds-ends:nth-child(1) {
+.misc:nth-child(1) {
   grid-column: 1/9;
   grid-row: 1 / span 5;
 }
-.odds-ends:nth-child(1) a {
+.misc:nth-child(1) a {
   background-color: #00f;
   box-shadow: 0 2px 12px rgba(0, 0, 255, 0.15);
 }
-.odds-ends:nth-child(1) a:before {
+.misc:nth-child(1) a:before {
   box-shadow: 0 20px 35px rgba(0, 0, 255, 0.2);
 }
-.odds-ends:nth-child(1) a > div {
+.misc:nth-child(1) a > div {
   position: absolute;
   top: -0.5rem;
   left: -0.5rem;
 }
-.odds-ends:nth-child(2) {
+.misc:nth-child(2) {
   grid-column: 11/-1;
   grid-row: 4 / span 5;
 }
 @media screen and (min-width: 40em) {
-  .odds-ends:nth-child(2) {
+  .misc:nth-child(2) {
     grid-column: 11/-2;
   }
 }
-.odds-ends:nth-child(2) a {
+.misc:nth-child(2) a {
   background: #f52;
   box-shadow: 0 2px 12px rgba(255, 85, 34, 0.2);
 }
-.odds-ends:nth-child(2) a:before {
+.misc:nth-child(2) a:before {
   box-shadow: 0 20px 35px rgba(255, 85, 34, 0.25);
 }
-.odds-ends:nth-child(2) picture,
-.odds-ends:nth-child(2) video {
+.misc:nth-child(2) picture,
+.misc:nth-child(2) video {
   position: absolute;
   top: -0.5rem;
   left: -0.5rem;
   height: 3rem;
   width: 3rem;
 }
-.odds-ends:nth-child(3) {
+.misc:nth-child(3) {
   grid-column: 2/7;
   grid-row: 8/-2;
 }
-.odds-ends:nth-child(3) .odds-ends-icon {
+.misc:nth-child(3) .misc-icon {
   right: auto;
   left: 1rem;
 }
-.odds-ends:nth-child(3) a {
+.misc:nth-child(3) a {
   background: #6b6928;
   box-shadow: 0 2px 12px rgba(107, 105, 40, 0.25);
 }
-.odds-ends:nth-child(3) a:before {
+.misc:nth-child(3) a:before {
   box-shadow: 0 20px 35px rgba(107, 105, 40, 0.3);
 }
-.odds-ends:nth-child(3) a > div {
+.misc:nth-child(3) a > div {
   position: absolute;
   bottom: -0.5rem;
   right: 1.5rem;
   width: 3rem;
 }
-.odds-ends:nth-child(4) {
+.misc:nth-child(4) {
   grid-column: 9/-2;
   grid-row: 11/-1;
 }
 @media screen and (min-width: 40em) {
-  .odds-ends:nth-child(4) {
+  .misc:nth-child(4) {
     grid-column: 9/-3;
   }
 }
-.odds-ends:nth-child(4) .odds-ends-icon {
+.misc:nth-child(4) .misc-icon {
   top: auto;
   bottom: 1rem;
 }
-.odds-ends:nth-child(4) a {
+.misc:nth-child(4) a {
   background: #d8cedf;
   box-shadow: 0 2px 12px rgba(167, 144, 183, 0.2);
 }
-.odds-ends:nth-child(4) a:before {
+.misc:nth-child(4) a:before {
   box-shadow: 0 20px 35px rgba(167, 144, 183, 0.25);
 }
-.odds-ends:nth-child(4) img {
+.misc:nth-child(4) img {
   position: absolute;
   top: -0.5rem;
   left: -0.5rem;
 }
-.odds-ends a {
+.misc a {
   height: 100%;
   width: 100%;
 }
-.odds-ends-icon {
+.misc-icon {
   background-color: #000;
   color: #fff;
   display: flex;
@@ -11236,46 +11236,46 @@ nav a:hover .nav-arrow {
   will-change: transform;
   pointer-events: none;
 }
-.odds-ends-icon svg {
+.misc-icon svg {
   position: absolute;
   right: 0.5rem;
 }
-.odds-ends-icon--after:before {
+.misc-icon--after:before {
   display: none;
 }
-.odds-ends-icon--after svg {
+.misc-icon--after svg {
   right: auto;
   left: 0.5rem;
 }
-.odds-ends-icon--after:after {
+.misc-icon--after:after {
   content: var(--title);
   width: 0;
   opacity: 0;
 }
-.odds-ends-icon:before {
+.misc-icon:before {
   content: var(--title);
   direction: rtl;
   width: 0;
   opacity: 0;
 }
-.odds-ends:focus .odds-ends-icon,
-.odds-ends:hover .odds-ends-icon {
+.misc:focus .misc-icon,
+.misc:hover .misc-icon {
   width: auto;
 }
-.odds-ends:focus .odds-ends-icon:after,
-.odds-ends:hover .odds-ends-icon:after {
+.misc:focus .misc-icon:after,
+.misc:hover .misc-icon:after {
   margin: 0 0.65rem 0 2rem;
   width: auto;
   opacity: 1;
 }
-.odds-ends:focus .odds-ends-icon:before,
-.odds-ends:hover .odds-ends-icon:before {
+.misc:focus .misc-icon:before,
+.misc:hover .misc-icon:before {
   margin: 0 2rem 0 0.65rem;
   width: auto;
   opacity: 1;
 }
-.hover-raise:focus + .odds-ends-icon,
-.hover-raise:hover + .odds-ends-icon {
+.hover-raise:focus + .misc-icon,
+.hover-raise:hover + .misc-icon {
   transform: translateY(-0.25rem);
 }
 .instagram:focus img:nth-child(1),
