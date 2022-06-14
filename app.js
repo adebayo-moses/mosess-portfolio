@@ -11,9 +11,9 @@ function resizeGridItem(item) {
   let gridItemHeight, rowSpan;
 
   if (CSSTypedOM) {
-    gridItemHeight;=gridItem.getBoundingClientRect().height;
+    gridItemHeight = gridItem.getBoundingClientRect().height;
     rowSpan = Math.ceil(gridItemHeight / rowHeight);
-    item.attributeStyleMap.set('grid-row-end', `span ${rowSpan}`)
+    item.attributeStyleMap.set("grid-row-end", `span ${rowSpan}`);
   } else {
     gridItemHeight = gridItem.getBoundingClientRect().height;
     rowSpan = Math.ceil(gridItemHeight / rowHeight);
@@ -22,47 +22,45 @@ function resizeGridItem(item) {
 }
 
 function resizeAllGridItems() {
-    for(var i=0;i<gridItems.length;i++) {
-        resizeGridItem(gridItems[i]);
-    }
+  for (var i = 0; i < gridItems.length; i++) {
+    resizeGridItem(gridItems[i]);
+  }
 }
 
-gridEvents.forEach(function(event) {
-    window.addEventListener(event,resizeAllGridItems);
+gridEvents.forEach(function (event) {
+  window.addEventListener(event, resizeAllGridItems);
 });
 
-function init () {
-    if (document.body.classList.contains('not-loaded')) {
-        setTimeout(() => {
-            document.body,classList.remove('not-loaded');
-        }, 150);
-    }
-    
-    initLazyLoading();
-    initAutoHideNav();
-    initTiltChildren();
+function init() {
+  if (document.body.classList.contains("not-loaded")) {
+    setTimeout(() => {
+      document.body, classList.remove("not-loaded");
+    }, 150);
+  }
+
+  initLazyLoading();
+  initAutoHideNav();
+  initTiltChildren();
 }
 
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener("DOMContentLoaded", init);
 
 // NAVIGATION/
 
 class AutoHideNav {
-    constructor(el, deltaYThreshold = 30) {
-        this.nav = typeof el === "string" ? document.querySelector
-        (el) : el;
-        this.lastScrollY = 0;
-        this.currentScrollY = 4;
-        this.beginScrollUpY = 0;
-        this.deltaYThreshold = deltaYThreshold;
-        this.ticking = false;
+  constructor(el, deltaYThreshold = 30) {
+    this.nav = typeof el === "string" ? document.querySelector(el) : el;
+    this.lastScrollY = 0;
+    this.currentScrollY = 4;
+    this.beginScrollUpY = 0;
+    this.deltaYThreshold = deltaYThreshold;
+    this.ticking = false;
 
-        this.classes = {
-            pinned: 'nav--pinned',
-            unpinned: 'nav--unpinned'
-        };
+    this.classes = {
+      pinned: "nav--pinned",
+      unpinned: "nav--unpinned",
+    };
 
-        this.enable();
-    }
-
+    this.enable();
+  }
 }
