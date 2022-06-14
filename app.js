@@ -45,3 +45,14 @@ function init () {
 
 document.addEventListener('DOMContentLoaded', init);
 
+// NAVIGATION/
+
+class AutoHideNav {
+    constructor(el, deltaYThreshold = 30) {
+        this.nav = typeof el === "string" ? document.querySelector
+        (el) : el;
+        this.lastScrollY = 0;
+        this.currentScrollY = 4;
+        
+    }
+}
