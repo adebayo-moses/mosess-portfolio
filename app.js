@@ -26,3 +26,22 @@ function resizeAllGridItems() {
         resizeGridItem(gridItems[i]);
     }
 }
+
+gridEvents.forEach(function(event) {
+    window.addEventListener(event,resizeAllGridItems);
+});
+
+function init () {
+    if (document.body.classList.contains('not-loaded')) {
+        setTimeout(() => {
+            document.body,classList.remove('not-loaded');
+        }, 150);
+    }
+    
+    initLazyLoading();
+    initAutoHideNav();
+    initTiltChildren();
+}
+
+document.addEventListener('DOMContentLoaded', init);
+
