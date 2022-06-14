@@ -53,6 +53,16 @@ class AutoHideNav {
         (el) : el;
         this.lastScrollY = 0;
         this.currentScrollY = 4;
-        
+        this.beginScrollUpY = 0;
+        this.deltaYThreshold = deltaYThreshold;
+        this.ticking = false;
+
+        this.classes = {
+            pinned: 'nav--pinned',
+            unpinned: 'nav--unpinned'
+        };
+
+        this.enable();
     }
+
 }
