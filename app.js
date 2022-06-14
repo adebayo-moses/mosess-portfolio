@@ -21,4 +21,8 @@ function resizeGridItem(item) {
   }
 }
 
-function 
+function resizeAllGridItems() {
+    for(var i=0;i<gridItems.length;i++) {
+        resizeGridItem(gridItems[i]);
+    }
+}
