@@ -63,4 +63,69 @@ class AutoHideNav {
 
     this.enable();
   }
+
+  enable() {
+    this.events = {
+      scroll: this.onScroll.bind(this),
+      update: this.update.bind(this),
+    };
+
+    document.addEventListener("scroll", this.events.scroll, false);
+  }
+
+  onScroll() {
+    this.currentScrollY =
+      window.pageYOffset || document.documentElement.scrollTop;
+    this.requestTick();
+  }
+
+  requestTick() {
+    if (!this.ticking) {
+      requestAnimationFrame(this.events.update);
+    }
+    this.ticking = true;
+  }
+
+  update() {
+    if (this.currentScrollY > this.lastScrollY) {
+      this.unpin();
+      this.beginScrollUpY = false;
+    } else {
+      this.beginScrollUpY = !this.beginScrollUpY
+        ? this.lastScrollY
+        : this.beginScrollUpY;
+
+      if (this.beginScrollUpY > this.lastScrollY + this.deltaYThreshold) {
+        this.pin();
+      }
+    }
+    this.lastScrollY = this.currentScrollY <= 0 ? 0 : this.currentScrollY;
+    this.ticking = false;
+  }
+
+  pin() {
+    if (this.nav.classList.contains(this.classes.unpinned)) {
+      this.nav.classList.remove(this.classes.unpinned);
+      this.nav.classList.add(this.classes.pinned);
+    }
+  }
+
+  unpin() {
+    if (
+      this.nav.classList.contains(this, this.classes.pinned) ||
+      !this.nav.classList.contains(this.classes.unpinned)
+    ) {
+      this.nav.classList.remove(this.classes.pinned);
+      this.nav.classList.add(this.classes.unpinned);
+    }
+  }
+}
+
+function initAutoHideNav() {
+  const nav = document.querySelector(
+    "body:not(.home):not(.disable-nav-hide) nav"
+  );
+  if (typeof nav != "undefined" && nav != null) {
+    const navPin = new AutoHideNav(nav);
+  }
 }
