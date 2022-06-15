@@ -6759,30 +6759,30 @@ code {
   font-style: bold;
   font-weight: 700;
   font-display: swap;
-  src: url(/_assets/fonts/Vulf_Sans-Bold.woff2) format("woff2"),
-    url(/_assets/fonts/Vulf_Sans-Bold.woff) format("woff"),
-    url(/_assets/fonts/Vulf_Sans-Bold.ttf) format("truetype");
+  src: url(/assets/fonts/Vulf_Sans-Bold.woff2) format("woff2"),
+    url(/assets/fonts/Vulf_Sans-Bold.woff) format("woff"),
+    url(/assets/fonts/Vulf_Sans-Bold.ttf) format("truetype");
 }
 @font-face {
   font-family: "Vulf Sans Regular";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(/_assets/fonts/Vulf_Sans-Regular.woff2) format("woff2"),
-    url(/_assets/fonts/Vulf_Sans-Regular.woff) format("woff"),
-    url(/_assets/fonts/Vulf_Sans-Regular.ttf) format("truetype");
+  src: url(/assets/fonts/Vulf_Sans-Regular.woff2) format("woff2"),
+    url(/assets/fonts/Vulf_Sans-Regular.woff) format("woff"),
+    url(/assets/fonts/Vulf_Sans-Regular.ttf) format("truetype");
 }
 @font-face {
   font-family: apercu-mono-regular-pro;
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url(/_assets/fonts/apercu-mono-regular-pro.eot);
-  src: url(/_assets/fonts/apercu-mono-regular-pro.eot?#iefix)
+  src: url(/assets/fonts/apercu-mono-regular-pro.eot);
+  src: url(/assets/fonts/apercu-mono-regular-pro.eot?#iefix)
       format("embedded-opentype"),
-    url(/_assets/fonts/apercu-mono-regular-pro.woff2) format("woff2"),
-    url(/_assets/fonts/apercu-mono-regular-pro.woff) format("woff"),
-    url(/_assets/fonts/apercu-mono-regular-pro.ttf) format("truetype");
+    url(/assets/fonts/apercu-mono-regular-pro.woff2) format("woff2"),
+    url(/assets/fonts/apercu-mono-regular-pro.woff) format("woff"),
+    url(/assets/fonts/apercu-mono-regular-pro.ttf) format("truetype");
 }
 html {
   font-size: 16px;
@@ -10613,10 +10613,10 @@ figure {
 }
 .flipbook__page-front,
 .flipbook__page-front div {
-  background-image: url(/_assets/img/elsewhere/dwell_cover@2x.jpg);
+  background-image: url(/assets/img/elsewhere/dwell_cover@2x.jpg);
   background-image: image-set(
-    "/_assets/img/elsewhere/dwell_cover.jpg" 1x,
-    "/_assets/img/elsewhere/dwell_cover.jpg" 2x
+    "/assets/img/elsewhere/dwell_cover.jpg" 1x,
+    "/assets/img/elsewhere/dwell_cover.jpg" 2x
   );
   background-color: #da0032;
   will-change: transform;
@@ -10628,10 +10628,10 @@ figure {
 }
 .flipbook__page-back,
 .flipbook__page-back div {
-  background-image: url(/_assets/img/elsewhere/dwell_1a@2x.jpg);
+  background-image: url(/assets/img/elsewhere/dwell_1a@2x.jpg);
   background-image: image-set(
-    "/_assets/img/elsewhere/dwell_1a.jpg" 1x,
-    "/_assets/img/elsewhere/dwell_1a.jpg" 2x
+    "/assets/img/elsewhere/dwell_1a.jpg" 1x,
+    "/assets/img/elsewhere/dwell_1a.jpg" 2x
   );
 }
 .flipbook__page > div {
@@ -10698,10 +10698,10 @@ figure {
   transform-origin: 0 0 0;
 }
 .flipbook__book-top {
-  background-image: url(/_assets/img/elsewhere/dwell_1b@2x.jpg);
+  background-image: url(/assets/img/elsewhere/dwell_1b@2x.jpg);
   background-image: image-set(
-    "/_assets/img/elsewhere/dwell_1b.jpg" 1x,
-    "/_assets/img/elsewhere/dwell_1b.jpg" 2x
+    "/assets/img/elsewhere/dwell_1b.jpg" 1x,
+    "/assets/img/elsewhere/dwell_1b.jpg" 2x
   );
   background-size: 100% 100%;
   background-position: 100%;
