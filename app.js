@@ -453,10 +453,10 @@ function initTiltChildren() {
     var tilt = new Tilt(tiltNodes[b], true);
   }
 
-  const oddsEndsTiltNodes = document.querySelectorAll(".misc");
-  const oddsEndsTiltNodesLen = oddsEndsTiltNodes.length;
-  for (let b = 0; oddsEndsTiltNodesLen > b; b++) {
-    var tilt = new Tilt(oddsEndsTiltNodes[b], false);
+  const miscTiltNodes = document.querySelectorAll(".misc");
+  const miscTiltNodesLen = miscTiltNodes.length;
+  for (let b = 0; miscTiltNodesLen > b; b++) {
+    var tilt = new Tilt(miscTiltNodes[b], false);
   }
 }
 
