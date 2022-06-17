@@ -2,9 +2,123 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Say Hello | Moses Adebayo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0"
+    />
+    <meta name="theme-color" content="#000000" />
+    <meta name="twitter:url" content="https://mosessmax.com" />
+    <meta
+      name="twitter:title"
+      content="Moses Max - Software Developer | Designer"
+    />
+    <meta
+      name="twitter:description"
+      content="Highly Impeccable, Quietly Confident Software Developer and Digital Designer."
+    />
+    <meta name="twitter:image" content="/assets/images/image_content.jpg" />
+    <meta name="twitter:creator" content="@mosessmax" />
+    <meta name="twitter:site" content="@mosessmax" />
+    <meta name="og:url" content="https://mosessmax.com" />
+    <meta name="og:image" content="/assets/images/image_content.jpg" />
+    <meta
+      name="description"
+      content="Your email: Say Hello: Got it, i check my mail very often, so i'll be in touch soon!"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <title>Say Hello -> Software Developer</title>
+
+    <link rel="stylesheet" href="/app.css" />
   </head>
-  <body></body>
+
+  <body class="dark-nav-hide">
+    <nav class="fixed top-0 mt4 mt5-s pl35 pl0-s ml5-s z-5">
+      <a href="index.html" class="black link hide-child flex"
+        ><span
+          class="icon icon--return-arrow nav-arrow dib mr2 self-center"
+          alt="Go Back"
+        ></span
+        >Go Back<span class="child">?</span></a
+      >
+    </nav>
+    <main class="ph35 ph4-s center tc mt6 mt7-s">
+      <h1 class="f1 f-subheadline-s lh-solid lh-title-s">Say Hello.</h1>
+
+      <form class="tl-flex flex-column measure-narrow-s center">
+        <fieldset class="bn ma0 pa0">
+          <label class="mb2 db" for="name">Your email:</label>
+          <input
+            required
+            placeholder="email@example.com"
+            class="mb3 input-reset ba bw2 b--black bg-transparent b2 br4 pa3 db w-100 outline-0"
+            type="email"
+            name="email"
+          />
+          <label class="mb2 db" for="message">Say hello:</label>
+          <textarea
+            required
+            placeholder="Don't be scared to use the form, it works :)"
+            class="mb3 input-reset ba bw2 b--black bg-transparent br4 pa3 db w-100 outline-0"
+            type="text"
+            name="message"
+            rows="5"
+          ></textarea>
+        </fieldset>
+        <div class="white w-100">
+          <input
+            class="bg-blue color-inherit hover-bg-light-blue bs3 hover-color-inherit bn input-reset link pa3 br4 w-100"
+            type="submit"
+            value="Send"
+          />
+        </div>
+      </form>
+
+      <div class="form-response measure-narrow-s center">
+        <div class="form-response-success dn">
+          <p>
+            <span class="small-caps">📨</span>Got it, i check my mail very
+            often, so i'll be in touch soon!
+          </p>
+          <a href="index.html" class="blue link">Go back home!</a>
+          <p class="mv2">or</p>
+          <a class="form-reset black link" href="#"> Tell me something else </a>
+        </div>
+
+        <div class="form-response-error dn">
+          <p>
+            Never say,<span class="push-double"></span>
+            <span class="pull-double">“</span>oops.” Always say,<span
+              class="push-double"
+            ></span>
+            <span class="pull-double">“</span>Ah, interesting.”
+          </p>
+          <p>
+            Try reaching me on
+            <a
+              class="black link external-link"
+              href="https://www.linkedin.com/in/adebayo-moses"
+              target="_blank"
+              >LinkedIn</a
+            >
+            or
+            <a
+              class="black link external-link"
+              href="https://twitter.com/mosessmax"
+              target="_blank"
+              >Twitter</a
+            >If you don't mind?
+          </p>
+        </div>
+      </div>
+
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+      <script></script>
+    </main>
+  </body>
 </html>
