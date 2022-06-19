@@ -119,12 +119,63 @@
               href="https://twitter.com/mosessmax"
               target="_blank"
               >Twitter</a
-            >If you don't mind?
+            >
+            If you don't mind?
           </p>
         </div>
       </div>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script>
+        const form = document.querySelector("form");
+        const formSuccess = document.querySelector(".form-response-success");
+        const formError = document.querySelector(".form-response-error");
+        const formReset = document.querySelector(".form-reset");
+        const formResponse = document.querySelector(".form-response");
 
-      <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+        const handleSubmit = (event) => {
+          event.preventDefault();
+          form.classList.add("form--sending");
+          form
+            .querySelector("[type=submit]")
+            .setAttribute("value", "Sending...");
+          const name = form.querySelector("[name=name]").value;
+          const email = form.querySelector("[name=email]").value;
+          const message = form.querySelector("[name=message]").value;
+          const data = { name, email, message, time: new Date().getTime() };
+
+          axios
+            .post(
+              "https://d04c-102-67-21-240.ngrok.io/api/v1/send-message",
+              data
+            )
+            .then((res) => {
+              console.log("success!");
+              hideForm();
+              formSuccess.style.display = "block";
+            })
+            .catch((error) => {
+              console.log(error);
+              hideForm();
+              formError.style.display = "block";
+            });
+        };
+
+        const hideForm = () => {
+          form.style.display = "none";
+          form.classList.remove("form--sending");
+          form.querySelector("[type=submit]").setAttribute("value", "Send");
+        };
+
+        const handleReset = (event) => {
+          event.preventDefault();
+          form.style.display = "block";
+          formSuccess.style.display = "none";
+          form.reset();
+        };
+
+        form.addEventListener("submit", handleSubmit);
+        formReset.addEventListener("click", handleReset);
+      </script>
 
       <script></script>
     </main>
