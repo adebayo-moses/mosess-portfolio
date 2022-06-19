@@ -141,11 +141,11 @@
           const name = form.querySelector("[name=name]").value;
           const email = form.querySelector("[name=email]").value;
           const message = form.querySelector("[name=message]").value;
-          const data = { name, email, message, time: new Date().getTime() };
+          const data = { name, email, message};
 
           axios
             .post(
-              "http://4d55-102-67-21-240.ngrok.io/api/v1/send-message",
+              "https://contact-service.onrender.com/api/v1/send-message",
               data
             )
             .then((res) => {
